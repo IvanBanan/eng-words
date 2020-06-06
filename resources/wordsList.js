@@ -1273,9 +1273,9 @@ WordsList =
             $('.editable, .listable').css('cursor', 'pointer');
         }
 
-        $('.word').css('width', WordsList.cellWidths.d_word + 'px');
-        $('.trans').css('width', WordsList.cellWidths.d_trans + 'px');
-        $('.phn').css('width', WordsList.cellWidths.d_phon + 'px');
+        // $('.word').css('width', WordsList.cellWidths.d_word + 'px');
+        // $('.trans').css('width', WordsList.cellWidths.d_trans + 'px');
+        // $('.phn').css('width', WordsList.cellWidths.d_phon + 'px');
 
         $('#WordsTableHead .hword').css('width', WordsList.cellWidths.h_word + 'px');
         $('#WordsTableHead .htrans').css('width', WordsList.cellWidths.h_trans + 'px');

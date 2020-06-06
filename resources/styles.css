@@ -1,12 +1,17 @@
 html{height: 100%;}
-body{min-width:1085px;height: 100%;margin:0;padding:0;background-color:#f9f9f9;font-family:Verdana, Arial, Helvetica, sans-serif;}
+body{
+	min-width:1085px;
+	height: 100%;margin:0;padding:0;background-color:#f9f9f9;font-family:Verdana, Arial, Helvetica, sans-serif;}
 form{margin:0;padding:0}
 a img, img:hover{border:none}
 .clear{clear:both}
 .dark{background-color:#eee}
 #RapidCenter{width:100%;height: 100%;background-color:#f9f9f9;}
 #RapidSidebar{background-color:#f9f9f9;vertical-align:top;padding:0 0 20px 0}
-#RapidContent{background-color:#f9f9f9;width: 1180px;margin: 0 auto;/* padding:0 0 0 20px; */font-size:12px;/* vertical-align:top; */height: 100%;display: flex;flex-direction: column;}
+#RapidContent{
+	background-color:#f9f9f9;
+	/*width: 1180px;*/
+	margin: 0 auto;/* padding:0 0 0 20px; */font-size:12px;/* vertical-align:top; */height: 100%;display: flex;flex-direction: column;}
 .RapidContentTop{background:#fff url(../pics/content_top.gif) repeat-x top right;margin-right:10px;height:9px;border-left:1px solid #ddd}
 .RapidContentCenter{flex: 1;overflow: hidden;background: #fff;margin-right:10px;padding:10px 25px 10px 20px;border-left:1px solid #dddddd;}
 .RapidContentBottom{background:#fff url(../pics/content_bottom.gif) repeat-x bottom right;margin-right:10px;height:9px;border-left:1px solid #ddd}
@@ -159,3 +164,30 @@ a img, img:hover{border:none}
 .helpNote{display:none;position:absolute;color:#333;font-size:11px;padding:7px 10px;z-index:5;background-color:#FFFFC2;border:1px solid #EBD9B0;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow: 5px 5px 5px rgba(0,0,0,0.3);-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.3);-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.3)}
 .helpNote ul,.helpNote ol{margin:5px 0 5px 0;padding:0 0 0 15px;list-style-position:inside}
 .helpNote li{margin:2px 0 2px 0}
+
+
+@media screen and (max-width: 320px) {
+	body{
+		min-width:320px;
+	}
+	.RapidContentCenter {
+		padding: 10px;
+		margin: 0 !important;
+	}
+	#DictMenu {
+		display: none !important;
+	}
+	.dictMenuP{
+		display: none !important;
+	}
+	#DictWordsList{
+		overflow: auto !important;
+	}
+	#WordsTableCont {
+		overflow: visible !important;
+	}
+	.csound > span {
+		width: 20px;
+		height: 20px;
+	}
+}

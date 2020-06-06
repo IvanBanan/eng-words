@@ -2135,10 +2135,10 @@ WordsList =
 
     onResizeWindow: function()
     {
-        var y = this.getDocFullHeight();
-        var wordsy = y - $('#WordsTableCont').offset().top - 55;
+        // var y = this.getDocFullHeight();
+        // var wordsy = y - $('#WordsTableCont').offset().top - 55;
 
-        $('#WordsTableCont').css('height', wordsy + 'px');
+        // $('#WordsTableCont').css('height', wordsy + 'px');
         return false;
     },
 

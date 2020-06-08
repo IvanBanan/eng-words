@@ -143,7 +143,7 @@ p{margin: 0;padding: 0;font-size:12px;color: #666}
 	<div id="DictMenuCont">
 		<h1 id="DictMenuName" class="dictMenuName1">
 			<div class="dictTypeIco dictType1" title="Базовый"></div>
-			<b>8000 Основных английских слов</b>
+			<b>~8000 Основных английских слов</b>
 		</h1>
 		<div id="DictMenu">
                             <a class="button wslink first dgreenButton" href="http://wordsteps.com/vocabulary/words/136958/8000+%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D1%85+%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85+%D1%81%D0%BB%D0%BE%D0%B2#" rel="http://wordsteps.com/vocabulary/words/136958/8000+%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D1%85+%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85+%D1%81%D0%BB%D0%BE%D0%B2">Слова</a><a class="button wslink last greenButton" href="http://wordsteps.com/vocabulary/words/136958/8000+%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D1%85+%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85+%D1%81%D0%BB%D0%BE%D0%B2#" rel="http://wordsteps.com/lesson/learn/136958">Учить</a>            		</div>
@@ -303,6 +303,7 @@ p{margin: 0;padding: 0;font-size:12px;color: #666}
 .checkable{margin:0 5px 0 5px}
 .word{padding-left:2px !important}
 .num>span{padding: 5px;}
+.status {padding: 5px !important;}
 .csound{border-right-width:0 !important;padding:0 2px 0 5px !important}
 .cword{border-left-width:0 !important}
 .cpoint{width:43px;text-align:center;padding:5px !important}
@@ -435,7 +436,7 @@ let content = `<tr id="FirstRow">
 
 for(let i=0; i < words8000.length; i++) {
 	const item = words8000[i];
-	let elStr = `<tr class="wrow" id="Wrow${item.id}">					
+	let elStr = `<tr class="wrow freq-${item.status}" id="Wrow${item.id}">					
 					<td class="num">
 						<span>${i+1}.</span>
 					</td>
@@ -451,6 +452,9 @@ for(let i=0; i < words8000.length; i++) {
                     <td>
                         <div class="static trans"  id="Tran${item.id}">${item.trans}</div>
                     </td>
+                    <td>
+                        <div class="static status"  id="Tran${item.id}">${item.status}</div>
+                    </td>
 				</tr>`;
 
 
@@ -461,6 +465,12 @@ for(let i=0; i < words8000.length; i++) {
 content += `<input class="NoMoreDicts" type="hidden" value="1">`;
 
 WordsTableEl.innerHTML = content;
+
+// setTimeout(() => {
+// 	Array.from(document.querySelectorAll('.wrow')).forEach(el => el.addEventListener('click', function(e){ 
+// 		console.log(e,this);
+// 	}));
+// });
 
 </script>
 
